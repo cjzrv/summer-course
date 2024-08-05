@@ -25,3 +25,5 @@ https://leetcode.cn/problems/median-of-two-sorted-arrays/solutions/258842/xun-zh
 ### How to run ~~my code~~ this code
 
 編譯並執行後，在命令行界面輸入要處理的兩個陣列，便會輸出結果在命令行界面上。
+
+<img src="./Screenshot_problem_3.png" alt="result" width="800px"/>

@@ -15,3 +15,5 @@ Given an array of integers nums sorted in non-decreasing order, find the startin
 
 ### How to run my code
 編譯並執行後，在命令行界面根據提示輸入陣列大小、陣列內容和目標數字，目標數字在該陣列的起始及結束位置便會輸出在命令行界面上。
+
+<img src="./Screenshot_problem_1.png" alt="result" width="800px"/>

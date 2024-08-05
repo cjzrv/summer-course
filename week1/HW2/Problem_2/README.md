@@ -21,3 +21,5 @@ Given a string s, return the longest palindromic substring in s.
 ### How to run my code
 
 編譯並執行後，在命令行界面輸入需要找迴文的字串，程式會輸出最長的迴文在命令行界面上。
+
+<img src="./Screenshot_problem_2.png" alt="result" width="800px"/>
