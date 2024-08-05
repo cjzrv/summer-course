@@ -1,0 +1,466 @@
+~ ❯ docker run -it pytorch/pytorch                                 ev@Duckbuntu
+root@27c5c0c270a6:/workspace# apt update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]   
+Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]             
+Get:3 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2118 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2787 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [44.7 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1131 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [51.8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1421 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2884 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2396 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [81.0 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [33.7 kB]
+Fetched 33.3 MB in 8s (4157 kB/s)                                              
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+23 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@27c5c0c270a6:/workspace# apt install neovim
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libbsd0 libexpat1 libice6 libluajit-5.1-2 libluajit-5.1-common libmd0
+  libmpdec3 libmsgpackc2 libpython3-stdlib libpython3.10-minimal
+  libpython3.10-stdlib libreadline8 libsm6 libsqlite3-0 libtermkey1
+  libtree-sitter0 libunibilium4 libuv1 libvterm0 libx11-6 libx11-data libxau6
+  libxcb1 libxdmcp6 libxext6 libxmu6 libxmuu1 libxt6 lua-luv media-types
+  neovim-runtime python3 python3-greenlet python3-minimal python3-msgpack
+  python3-neovim python3-pynvim python3.10 python3.10-minimal readline-common
+  x11-common xauth xclip xxd
+Suggested packages:
+  ctags vim-scripts python3-doc python3-tk python3-venv python-greenlet-dev
+  python-greenlet-doc python3.10-venv python3.10-doc binutils binfmt-support
+  readline-doc
+The following NEW packages will be installed:
+  libbsd0 libexpat1 libice6 libluajit-5.1-2 libluajit-5.1-common libmd0
+  libmpdec3 libmsgpackc2 libpython3-stdlib libpython3.10-minimal
+  libpython3.10-stdlib libreadline8 libsm6 libsqlite3-0 libtermkey1
+  libtree-sitter0 libunibilium4 libuv1 libvterm0 libx11-6 libx11-data libxau6
+  libxcb1 libxdmcp6 libxext6 libxmu6 libxmuu1 libxt6 lua-luv media-types
+  neovim neovim-runtime python3 python3-greenlet python3-minimal
+  python3-msgpack python3-neovim python3-pynvim python3.10 python3.10-minimal
+  readline-common x11-common xauth xclip xxd
+0 upgraded, 45 newly installed, 0 to remove and 23 not upgraded.
+Need to get 14.6 MB of archives.
+After this operation, 56.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.5 [813 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.3 [91.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.5 [2244 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04 [24.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpdec3 amd64 2.5.1-2build2 [86.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 readline-common all 8.1.2-1 [53.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libreadline8 amd64 8.1.2-1 [153 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsqlite3-0 amd64 3.37.2-2ubuntu0.3 [641 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.5 [1849 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.5 [509 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04 [6910 B]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04 [22.8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmd0 amd64 1.0.4-1build1 [23.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbsd0 amd64 0.11.5-1 [44.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 xxd amd64 2:8.2.3995-1ubuntu2.17 [53.7 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libuv1 amd64 1.43.0-1ubuntu0.1 [92.7 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
+Get:19 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu5 [10.9 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb1 amd64 1.14-3ubuntu3 [49.0 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-data all 2:1.7.5-1ubuntu0.3 [120 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-6 amd64 2:1.7.5-1ubuntu0.3 [667 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxext6 amd64 2:1.3.4-1build1 [31.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmuu1 amd64 2:1.1.3-3 [10.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy/main amd64 xauth amd64 1:1.1-1build2 [27.5 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy/main amd64 x11-common all 1:7.7+23ubuntu2 [23.4 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy/main amd64 libice6 amd64 2:1.0.10-1build2 [42.6 kB]
+Get:28 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libluajit-5.1-common all 2.1.0~beta3+dfsg-6 [44.3 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libluajit-5.1-2 amd64 2.1.0~beta3+dfsg-6 [238 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsm6 amd64 2:1.2.3-1build2 [16.7 kB]
+Get:31 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libtree-sitter0 amd64 0.20.3-1 [86.5 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libunibilium4 amd64 2.1.0-1 [22.6 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxt6 amd64 1:1.2.1-1 [177 kB]
+Get:34 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxmu6 amd64 2:1.1.3-3 [49.6 kB]
+Get:35 http://archive.ubuntu.com/ubuntu jammy/universe amd64 lua-luv amd64 1.36.0-0-1 [84.2 kB]
+Get:36 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-msgpack amd64 1.0.3-1build1 [67.8 kB]
+Get:37 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-greenlet amd64 1.1.2-3build1 [65.0 kB]
+Get:38 http://archive.ubuntu.com/ubuntu jammy/universe amd64 python3-pynvim all 0.4.2-1 [31.2 kB]
+Get:39 http://archive.ubuntu.com/ubuntu jammy/universe amd64 python3-neovim all 0.4.2-1 [1804 B]
+Get:40 http://archive.ubuntu.com/ubuntu jammy/universe amd64 xclip amd64 0.13-2 [18.3 kB]
+Get:41 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmsgpackc2 amd64 3.3.0-4 [15.1 kB]
+Get:42 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libtermkey1 amd64 0.22-1 [18.5 kB]
+Get:43 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libvterm0 amd64 0.1.4-1 [29.7 kB]
+Get:44 http://archive.ubuntu.com/ubuntu jammy/universe amd64 neovim-runtime all 0.6.1-3 [4115 kB]
+Get:45 http://archive.ubuntu.com/ubuntu jammy/universe amd64 neovim amd64 0.6.1-3 [1814 kB]
+Fetched 14.6 MB in 8s (1858 kB/s)                                              
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libpython3.10-minimal:amd64.
+(Reading database ... 6643 files and directories currently installed.)
+Preparing to unpack .../libpython3.10-minimal_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.5) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.4.7-1ubuntu0.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.3) ...
+Selecting previously unselected package python3.10-minimal.
+Preparing to unpack .../python3.10-minimal_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking python3.10-minimal (3.10.12-1~22.04.5) ...
+Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.5) ...
+Setting up libexpat1:amd64 (2.4.7-1ubuntu0.3) ...
+Setting up python3.10-minimal (3.10.12-1~22.04.5) ...
+Selecting previously unselected package python3-minimal.
+(Reading database ... 6947 files and directories currently installed.)
+Preparing to unpack .../0-python3-minimal_3.10.6-1~22.04_amd64.deb ...
+Unpacking python3-minimal (3.10.6-1~22.04) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../1-media-types_7.0.0_all.deb ...
+Unpacking media-types (7.0.0) ...
+Selecting previously unselected package libmpdec3:amd64.
+Preparing to unpack .../2-libmpdec3_2.5.1-2build2_amd64.deb ...
+Unpacking libmpdec3:amd64 (2.5.1-2build2) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../3-readline-common_8.1.2-1_all.deb ...
+Unpacking readline-common (8.1.2-1) ...
+Selecting previously unselected package libreadline8:amd64.
+Preparing to unpack .../4-libreadline8_8.1.2-1_amd64.deb ...
+Unpacking libreadline8:amd64 (8.1.2-1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../5-libsqlite3-0_3.37.2-2ubuntu0.3_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.37.2-2ubuntu0.3) ...
+Selecting previously unselected package libpython3.10-stdlib:amd64.
+Preparing to unpack .../6-libpython3.10-stdlib_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.5) ...
+Selecting previously unselected package python3.10.
+Preparing to unpack .../7-python3.10_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking python3.10 (3.10.12-1~22.04.5) ...
+Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../8-libpython3-stdlib_3.10.6-1~22.04_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.10.6-1~22.04) ...
+Setting up python3-minimal (3.10.6-1~22.04) ...
+Selecting previously unselected package python3.
+(Reading database ... 7377 files and directories currently installed.)
+Preparing to unpack .../00-python3_3.10.6-1~22.04_amd64.deb ...
+Unpacking python3 (3.10.6-1~22.04) ...
+Selecting previously unselected package libmd0:amd64.
+Preparing to unpack .../01-libmd0_1.0.4-1build1_amd64.deb ...
+Unpacking libmd0:amd64 (1.0.4-1build1) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../02-libbsd0_0.11.5-1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.11.5-1) ...
+Selecting previously unselected package xxd.
+Preparing to unpack .../03-xxd_2%3a8.2.3995-1ubuntu2.17_amd64.deb ...
+Unpacking xxd (2:8.2.3995-1ubuntu2.17) ...
+Selecting previously unselected package libuv1:amd64.
+Preparing to unpack .../04-libuv1_1.43.0-1ubuntu0.1_amd64.deb ...
+Unpacking libuv1:amd64 (1.43.0-1ubuntu0.1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../05-libxau6_1%3a1.0.9-1build5_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build5) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../06-libxdmcp6_1%3a1.1.3-0ubuntu5_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../07-libxcb1_1.14-3ubuntu3_amd64.deb ...
+Unpacking libxcb1:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../08-libx11-data_2%3a1.7.5-1ubuntu0.3_all.deb ...
+Unpacking libx11-data (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../09-libx11-6_2%3a1.7.5-1ubuntu0.3_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../10-libxext6_2%3a1.3.4-1build1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../11-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../12-xauth_1%3a1.1-1build2_amd64.deb ...
+Unpacking xauth (1:1.1-1build2) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../13-x11-common_1%3a7.7+23ubuntu2_all.deb ...
+Unpacking x11-common (1:7.7+23ubuntu2) ...
+Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../14-libice6_2%3a1.0.10-1build2_amd64.deb ...
+Unpacking libice6:amd64 (2:1.0.10-1build2) ...
+Selecting previously unselected package libluajit-5.1-common.
+Preparing to unpack .../15-libluajit-5.1-common_2.1.0~beta3+dfsg-6_all.deb ...
+Unpacking libluajit-5.1-common (2.1.0~beta3+dfsg-6) ...
+Selecting previously unselected package libluajit-5.1-2:amd64.
+Preparing to unpack .../16-libluajit-5.1-2_2.1.0~beta3+dfsg-6_amd64.deb ...
+Unpacking libluajit-5.1-2:amd64 (2.1.0~beta3+dfsg-6) ...
+Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../17-libsm6_2%3a1.2.3-1build2_amd64.deb ...
+Unpacking libsm6:amd64 (2:1.2.3-1build2) ...
+Selecting previously unselected package libtree-sitter0:amd64.
+Preparing to unpack .../18-libtree-sitter0_0.20.3-1_amd64.deb ...
+Unpacking libtree-sitter0:amd64 (0.20.3-1) ...
+Selecting previously unselected package libunibilium4:amd64.
+Preparing to unpack .../19-libunibilium4_2.1.0-1_amd64.deb ...
+Unpacking libunibilium4:amd64 (2.1.0-1) ...
+Selecting previously unselected package libxt6:amd64.
+Preparing to unpack .../20-libxt6_1%3a1.2.1-1_amd64.deb ...
+Unpacking libxt6:amd64 (1:1.2.1-1) ...
+Selecting previously unselected package libxmu6:amd64.
+Preparing to unpack .../21-libxmu6_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmu6:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package lua-luv:amd64.
+Preparing to unpack .../22-lua-luv_1.36.0-0-1_amd64.deb ...
+Unpacking lua-luv:amd64 (1.36.0-0-1) ...
+Selecting previously unselected package python3-msgpack.
+Preparing to unpack .../23-python3-msgpack_1.0.3-1build1_amd64.deb ...
+Unpacking python3-msgpack (1.0.3-1build1) ...
+Selecting previously unselected package python3-greenlet.
+Preparing to unpack .../24-python3-greenlet_1.1.2-3build1_amd64.deb ...
+Unpacking python3-greenlet (1.1.2-3build1) ...
+Selecting previously unselected package python3-pynvim.
+Preparing to unpack .../25-python3-pynvim_0.4.2-1_all.deb ...
+Unpacking python3-pynvim (0.4.2-1) ...
+Selecting previously unselected package python3-neovim.
+Preparing to unpack .../26-python3-neovim_0.4.2-1_all.deb ...
+Unpacking python3-neovim (0.4.2-1) ...
+Selecting previously unselected package xclip.
+Preparing to unpack .../27-xclip_0.13-2_amd64.deb ...
+Unpacking xclip (0.13-2) ...
+Selecting previously unselected package libmsgpackc2:amd64.
+Preparing to unpack .../28-libmsgpackc2_3.3.0-4_amd64.deb ...
+Unpacking libmsgpackc2:amd64 (3.3.0-4) ...
+Selecting previously unselected package libtermkey1:amd64.
+Preparing to unpack .../29-libtermkey1_0.22-1_amd64.deb ...
+Unpacking libtermkey1:amd64 (0.22-1) ...
+Selecting previously unselected package libvterm0:amd64.
+Preparing to unpack .../30-libvterm0_0.1.4-1_amd64.deb ...
+Unpacking libvterm0:amd64 (0.1.4-1) ...
+Selecting previously unselected package neovim-runtime.
+Preparing to unpack .../31-neovim-runtime_0.6.1-3_all.deb ...
+Unpacking neovim-runtime (0.6.1-3) ...
+Selecting previously unselected package neovim.
+Preparing to unpack .../32-neovim_0.6.1-3_amd64.deb ...
+Unpacking neovim (0.6.1-3) ...
+Setting up media-types (7.0.0) ...
+Setting up libunibilium4:amd64 (2.1.0-1) ...
+Setting up libxau6:amd64 (1:1.0.9-1build5) ...
+Setting up neovim-runtime (0.6.1-3) ...
+Setting up libmsgpackc2:amd64 (3.3.0-4) ...
+Setting up libsqlite3-0:amd64 (3.37.2-2ubuntu0.3) ...
+Setting up x11-common (1:7.7+23ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based fronte
+nd cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Ter
+m::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/pe
+rl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr
+/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/
+5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/
+FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up xxd (2:8.2.3995-1ubuntu2.17) ...
+Setting up libvterm0:amd64 (0.1.4-1) ...
+Setting up libuv1:amd64 (1.43.0-1ubuntu0.1) ...
+Setting up libtree-sitter0:amd64 (0.20.3-1) ...
+Setting up libx11-data (2:1.7.5-1ubuntu0.3) ...
+Setting up libluajit-5.1-common (2.1.0~beta3+dfsg-6) ...
+Setting up libtermkey1:amd64 (0.22-1) ...
+Setting up libmd0:amd64 (1.0.4-1build1) ...
+Setting up libmpdec3:amd64 (2.5.1-2build2) ...
+Setting up libbsd0:amd64 (0.11.5-1) ...
+Setting up readline-common (8.1.2-1) ...
+Setting up libice6:amd64 (2:1.0.10-1build2) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
+Setting up libreadline8:amd64 (8.1.2-1) ...
+Setting up libluajit-5.1-2:amd64 (2.1.0~beta3+dfsg-6) ...
+Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.5) ...
+Setting up lua-luv:amd64 (1.36.0-0-1) ...
+Setting up libx11-6:amd64 (2:1.7.5-1ubuntu0.3) ...
+Setting up libsm6:amd64 (2:1.2.3-1build2) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up libpython3-stdlib:amd64 (3.10.6-1~22.04) ...
+Setting up neovim (0.6.1-3) ...
+update-alternatives: using /usr/bin/nvim to provide /usr/bin/editor (editor) in 
+auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz b
+ecause associated file /usr/share/man/man1/nvim.1.gz (of link group editor) does
+n't exist
+update-alternatives: using /usr/libexec/neovim/ex to provide /usr/bin/ex (ex) in
+ auto mode
+update-alternatives: using /usr/libexec/neovim/rvim to provide /usr/bin/rvim (rv
+im) in auto mode
+update-alternatives: using /usr/libexec/neovim/rview to provide /usr/bin/rview (
+rview) in auto mode
+update-alternatives: using /usr/bin/nvim to provide /usr/bin/vi (vi) in auto mod
+e
+update-alternatives: using /usr/bin/nvim to provide /usr/bin/vim (vim) in auto m
+ode
+update-alternatives: using /usr/libexec/neovim/view to provide /usr/bin/view (vi
+ew) in auto mode
+update-alternatives: using /usr/libexec/neovim/vimdiff to provide /usr/bin/vimdi
+ff (vimdiff) in auto mode
+Setting up python3.10 (3.10.12-1~22.04.5) ...
+Setting up libxext6:amd64 (2:1.3.4-1build1) ...
+Setting up python3 (3.10.6-1~22.04) ...
+running python rtupdate hooks for python3.10...
+running python post-rtupdate hooks for python3.10...
+Setting up python3-greenlet (1.1.2-3build1) ...
+Setting up libxt6:amd64 (1:1.2.1-1) ...
+Setting up xauth (1:1.1-1build2) ...
+Setting up python3-msgpack (1.0.3-1build1) ...
+Setting up libxmu6:amd64 (2:1.1.3-3) ...
+Setting up python3-pynvim (0.4.2-1) ...
+Setting up xclip (0.13-2) ...
+Setting up python3-neovim (0.4.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+root@27c5c0c270a6:/workspace# nvim test.py
+root@27c5c0c270a6:/workspace# python test.py
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz to ./data/MNIST/raw/train-images-idx3-ubyte.gz
+100%|████████████████████████████| 9912422/9912422 [00:06<00:00, 1460781.24it/s]
+Extracting ./data/MNIST/raw/train-images-idx3-ubyte.gz to ./data/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz to ./data/MNIST/raw/train-labels-idx1-ubyte.gz
+100%|█████████████████████████████████| 28881/28881 [00:00<00:00, 146185.98it/s]
+Extracting ./data/MNIST/raw/train-labels-idx1-ubyte.gz to ./data/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz to ./data/MNIST/raw/t10k-images-idx3-ubyte.gz
+100%|████████████████████████████| 1648877/1648877 [00:01<00:00, 1070346.09it/s]
+Extracting ./data/MNIST/raw/t10k-images-idx3-ubyte.gz to ./data/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz to ./data/MNIST/raw/t10k-labels-idx1-ubyte.gz
+100%|██████████████████████████████████| 4542/4542 [00:00<00:00, 7140378.10it/s]
+Extracting ./data/MNIST/raw/t10k-labels-idx1-ubyte.gz to ./data/MNIST/raw
+
+Epoch [1/10], Step [100/938], Loss: 0.5740
+Epoch [1/10], Step [200/938], Loss: 0.1683
+Epoch [1/10], Step [300/938], Loss: 0.1123
+Epoch [1/10], Step [400/938], Loss: 0.0985
+Epoch [1/10], Step [500/938], Loss: 0.0894
+Epoch [1/10], Step [600/938], Loss: 0.0811
+Epoch [1/10], Step [700/938], Loss: 0.0688
+Epoch [1/10], Step [800/938], Loss: 0.0664
+Epoch [1/10], Step [900/938], Loss: 0.0555
+** Epoch 1 Test Accuracy: 98.68% **
+Epoch [2/10], Step [100/938], Loss: 0.0424
+Epoch [2/10], Step [200/938], Loss: 0.0492
+Epoch [2/10], Step [300/938], Loss: 0.0508
+Epoch [2/10], Step [400/938], Loss: 0.0339
+Epoch [2/10], Step [500/938], Loss: 0.0454
+Epoch [2/10], Step [600/938], Loss: 0.0474
+Epoch [2/10], Step [700/938], Loss: 0.0353
+Epoch [2/10], Step [800/938], Loss: 0.0451
+Epoch [2/10], Step [900/938], Loss: 0.0438
+** Epoch 2 Test Accuracy: 99.04% **
+Epoch [3/10], Step [100/938], Loss: 0.0265
+Epoch [3/10], Step [200/938], Loss: 0.0271
+Epoch [3/10], Step [300/938], Loss: 0.0309
+Epoch [3/10], Step [400/938], Loss: 0.0282
+Epoch [3/10], Step [500/938], Loss: 0.0351
+Epoch [3/10], Step [600/938], Loss: 0.0319
+Epoch [3/10], Step [700/938], Loss: 0.0266
+Epoch [3/10], Step [800/938], Loss: 0.0291
+Epoch [3/10], Step [900/938], Loss: 0.0283
+** Epoch 3 Test Accuracy: 98.91% **
+Epoch [4/10], Step [100/938], Loss: 0.0168
+Epoch [4/10], Step [200/938], Loss: 0.0237
+Epoch [4/10], Step [300/938], Loss: 0.0169
+Epoch [4/10], Step [400/938], Loss: 0.0215
+Epoch [4/10], Step [500/938], Loss: 0.0272
+Epoch [4/10], Step [600/938], Loss: 0.0196
+Epoch [4/10], Step [700/938], Loss: 0.0272
+Epoch [4/10], Step [800/938], Loss: 0.0195
+Epoch [4/10], Step [900/938], Loss: 0.0226
+** Epoch 4 Test Accuracy: 99.13% **
+Epoch [5/10], Step [100/938], Loss: 0.0181
+Epoch [5/10], Step [200/938], Loss: 0.0120
+Epoch [5/10], Step [300/938], Loss: 0.0120
+Epoch [5/10], Step [400/938], Loss: 0.0117
+Epoch [5/10], Step [500/938], Loss: 0.0182
+Epoch [5/10], Step [600/938], Loss: 0.0197
+Epoch [5/10], Step [700/938], Loss: 0.0123
+Epoch [5/10], Step [800/938], Loss: 0.0164
+Epoch [5/10], Step [900/938], Loss: 0.0232
+** Epoch 5 Test Accuracy: 98.99% **
+Epoch [6/10], Step [100/938], Loss: 0.0113
+Epoch [6/10], Step [200/938], Loss: 0.0088
+Epoch [6/10], Step [300/938], Loss: 0.0107
+Epoch [6/10], Step [400/938], Loss: 0.0123
+Epoch [6/10], Step [500/938], Loss: 0.0124
+Epoch [6/10], Step [600/938], Loss: 0.0150
+Epoch [6/10], Step [700/938], Loss: 0.0163
+Epoch [6/10], Step [800/938], Loss: 0.0158
+Epoch [6/10], Step [900/938], Loss: 0.0131
+** Epoch 6 Test Accuracy: 98.92% **
+Epoch [7/10], Step [100/938], Loss: 0.0084
+Epoch [7/10], Step [200/938], Loss: 0.0094
+Epoch [7/10], Step [300/938], Loss: 0.0069
+Epoch [7/10], Step [400/938], Loss: 0.0077
+Epoch [7/10], Step [500/938], Loss: 0.0103
+Epoch [7/10], Step [600/938], Loss: 0.0106
+Epoch [7/10], Step [700/938], Loss: 0.0171
+Epoch [7/10], Step [800/938], Loss: 0.0150
+Epoch [7/10], Step [900/938], Loss: 0.0137
+** Epoch 7 Test Accuracy: 98.91% **
+Epoch [8/10], Step [100/938], Loss: 0.0069
+Epoch [8/10], Step [200/938], Loss: 0.0062
+Epoch [8/10], Step [300/938], Loss: 0.0078
+Epoch [8/10], Step [400/938], Loss: 0.0073
+Epoch [8/10], Step [500/938], Loss: 0.0057
+Epoch [8/10], Step [600/938], Loss: 0.0102
+Epoch [8/10], Step [700/938], Loss: 0.0082
+Epoch [8/10], Step [800/938], Loss: 0.0178
+Epoch [8/10], Step [900/938], Loss: 0.0182
+** Epoch 8 Test Accuracy: 99.09% **
+Epoch [9/10], Step [100/938], Loss: 0.0094
+Epoch [9/10], Step [200/938], Loss: 0.0043
+Epoch [9/10], Step [300/938], Loss: 0.0122
+Epoch [9/10], Step [400/938], Loss: 0.0072
+Epoch [9/10], Step [500/938], Loss: 0.0074
+Epoch [9/10], Step [600/938], Loss: 0.0058
+Epoch [9/10], Step [700/938], Loss: 0.0077
+Epoch [9/10], Step [800/938], Loss: 0.0040
+Epoch [9/10], Step [900/938], Loss: 0.0044
+** Epoch 9 Test Accuracy: 99.03% **
+Epoch [10/10], Step [100/938], Loss: 0.0106
+Epoch [10/10], Step [200/938], Loss: 0.0066
+Epoch [10/10], Step [300/938], Loss: 0.0043
+Epoch [10/10], Step [400/938], Loss: 0.0050
+Epoch [10/10], Step [500/938], Loss: 0.0024
+Epoch [10/10], Step [600/938], Loss: 0.0047
+Epoch [10/10], Step [700/938], Loss: 0.0114
+Epoch [10/10], Step [800/938], Loss: 0.0080
+Epoch [10/10], Step [900/938], Loss: 0.0036
+** Epoch 10 Test Accuracy: 99.21% **
+
+Training completed.
+Test accuracy: 99.21%
+
+root@27c5c0c270a6:/workspace# exit
+exit
+~ ❯                                                        3m 57s ev@Duckbuntu
