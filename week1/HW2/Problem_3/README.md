@@ -9,7 +9,7 @@ The overall run time complexity should be O(log (m+n)).
 ### Explanation
 看到複雜度要求要 O(log(n))，我第一個想法就是用 binary search 的方式，想辦法在不合併兩個陣列的情況下找出中位數，然而寫了五個小時還是想不出具體的解法，這題我放棄。
 
-這題我提交的程式碼是照搬下面這個連結裡的影片內容。
+這題我提交的程式碼是照搬下面這個連結裡的影片內容。  
 https://leetcode.cn/problems/median-of-two-sorted-arrays/solutions/258842/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114/
 
 這位作者定義了一個虛擬的分隔線，使兩個陣列各被切割為左右兩部份，將被切割出來的兩陣列左半部份視為一個集合，右半部份視為另一個集合，兩個集合的元素數量相等（奇數時定義為左集合多 1），且右半部份的所有元素都大於左半部份。
