@@ -1,42 +1,37 @@
 #include <iostream>
 #include <vector>
 #include <climits>
-#include <cmath>
 
 using namespace std;
 
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        if (nums1.size() > nums2.size())
-            return findMedianSortedArrays(nums2, nums1);
-
         int m = nums1.size();
         int n = nums2.size();
-        int totalLeft = (m+n+1)/2;
-        int left = 0;
-        int right = m;
+        int mid = (m+n)/2;
+        int median, last;
+        int j = 0, k = 0;
 
-        while(left < right)
+        if(m+n == 0) return 0;
+        if(n == 0) return (m % 2 == 1) ? nums1[mid] : (nums1[mid] + nums1[mid-1])/2.0;
+        if(m == 0) return (n % 2 == 1) ? nums2[mid] : (nums2[mid] + nums2[mid-1])/2.0;
+
+        for(int i = 0; i <= mid; i++)
         {
-            int i = left + (right - left + 1)/2;
-            int j = totalLeft - i;
-            if(nums1[i-1] > nums2[j])
-                right = i-1;
+            last = median;
+            int temp1 = (j < m) ? nums1[j] : INT_MAX;
+            int temp2 = (k < n) ? nums2[k] : INT_MAX;
+
+            if(temp1 > temp2)
+                median = nums2[k++];
             else
-                left = i;
+                median = nums1[j++];
         }
 
-        int i = left;
-        int j = totalLeft - i;
-        int nums1LeftMax = (i == 0) ? INT_MIN : nums1[i-1];
-        int nums1RightMin = (i == m) ? INT_MAX : nums1[i];
-        int nums2LeftMax = (j == 0) ? INT_MIN : nums2[j-1];
-        int nums2RightMin = (j == n) ? INT_MAX : nums2[j];
-
-        if((m + n) % 2 == 1)
-            return max(nums1LeftMax, nums2LeftMax);
+        if((m+n)%2 == 1)
+            return median;
         else
-            return (double) (max(nums1LeftMax, nums2LeftMax) + min(nums1RightMin, nums2RightMin))/2.0;
+            return (median+last) / 2.0;
     }
 };
