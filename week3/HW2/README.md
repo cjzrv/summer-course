@@ -137,21 +137,24 @@ make -C ./PX4-Autopilot/ px4_sitl gazebo-classic
 ```
 </details>
 
-<iframe height="405" src="https://www.youtube.com/embed/3CWNg_pJPFQ?si=IupvA6u8OGqOPXYy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Watch the tutorial on YouTube](https://img.youtube.com/vi/3CWNg_pJPFQ/0.jpg)](https://www.youtube.com/watch?v=3CWNg_pJPFQ)
 
->This video starts after completing the "Run the `ubuntu.sh` to install" step.
-    
+
+> This video starts after completing the "Run the `ubuntu.sh` to install" step.
+
+> You can check out this article on my HackMD (for better HTML syntax support).  
+https://hackmd.io/@zjewp/px4
 ## 1. Install PX4
 
 #### Download PX4 Source Code
 
-```shell
+```
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 ```
 
 #### Run the `ubuntu.sh` to install
 
-```shell
+```
 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 ```
 
