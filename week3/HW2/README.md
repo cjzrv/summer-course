@@ -137,7 +137,10 @@ make -C ./PX4-Autopilot/ px4_sitl gazebo-classic
 ```
 </details>
 
+<iframe height="405" src="https://www.youtube.com/embed/3CWNg_pJPFQ?si=IupvA6u8OGqOPXYy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+>This video starts after completing the "Run the `ubuntu.sh` to install" step.
+    
 ## 1. Install PX4
 
 #### Download PX4 Source Code
@@ -174,7 +177,7 @@ sudo apt-get update && sudo apt-get install -y python3-catkin-tools
 
 ## 3. Install MAVROS
 
-#### Install MAVROS with apt-get (Binary install)
+#### Install MAVROS with apt-get (Binary Install)
 ```
 sudo apt-get install -y ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
 ```
@@ -197,7 +200,7 @@ catkin init
 wstool init src
 ```
 
-#### Creating the ROS Package
+#### Create the ROS Package
 ```
 cd src
 catkin_create_pkg offboard_py rospy
@@ -297,7 +300,7 @@ if __name__ == "__main__":
 </details>
 
 <details>
-    <summary style="font-weight: bold;">補充說明</summary>
+    <summary style="font-weight: bold;">Additional explanation</summary>
 
 官方的說明文件上未將 Shebang 置於程式碼最上方，導致執行時會發生錯誤，且 ubuntu 20.04 版本的 ```python``` 環境變數是未被設定的，應該將 Shebang 裡的 ```python``` 改成 ```python3```。
 
@@ -309,7 +312,7 @@ if __name__ == "__main__":
     
 </details>
 
-#### Creating the ROS launch file 
+#### Create the ROS launch file 
 ```
 roscd offboard_py
 mkdir launch
@@ -331,7 +334,7 @@ touch start_offb.launch
 
 ## Modify your .bashrc
 
-#### Add following lines to your .bashrc
+#### Add following lines to your `.bashrc`
 ```=
 source ~/poop_space/devel/setup.bash
 source ~/PX4-Autopilot/Tools/simulation/gazebo-classic/setup_gazebo.bash ~/PX4-Autopilot ~/PX4-Autopilot/build/px4_sitl_default
