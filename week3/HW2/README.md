@@ -137,13 +137,17 @@ make -C ./PX4-Autopilot/ px4_sitl gazebo-classic
 ```
 </details>
 
-[![Watch the tutorial on YouTube](https://img.youtube.com/vi/3CWNg_pJPFQ/0.jpg)](https://www.youtube.com/watch?v=3CWNg_pJPFQ)
+
+[![Watch the tutorial on YouTube](https://img.youtube.com/vi/3CWNg_pJPFQ/0.jpg)](https://www.youtube.com/watch?v=3CWNg_pJPFQ)  
+https://www.youtube.com/watch?v=3CWNg_pJPFQ
 
 
-> This video starts after completing the "Run the `ubuntu.sh` to install" step.
+> This video starts after completing the "Run the `ubuntu.sh` to install" step.  
+You can download the vdi file from my Google Drive [here](https://drive.google.com/file/d/1LMt0zbts0C5hIjb7dVVFDUKfM0ROCESi/view?usp=drive_link) if you want to follow along with the video. (The user password is "rvl".)
 
 > You can check out this article on my HackMD (for better HTML syntax support).  
 https://hackmd.io/@zjewp/px4
+
 ## 1. Install PX4
 
 #### Download PX4 Source Code
@@ -369,3 +373,25 @@ source ~/.bashrc
 ```
 roslaunch offboard_py start_offb.launch
 ```
+
+---
+
+<details>
+  <summary style="font-weight: bold;">Reference</summary>
+    
+PX4 Installation  
+https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
+
+MAVROS Installation  
+https://docs.px4.io/main/en/ros/mavros_installation.html
+
+MAVROS Offboard control example (Python)  
+https://docs.px4.io/main/en/ros/mavros_offboard_python.html
+    
+PX4 UAV uses Mavros in Gazebo-classic simulation  
+https://github.com/FCWTW/SummerCourse/tree/main/Week%203/HW2/README.md
+
+ERROR: cannot launch node of type [px4/px4]  
+https://github.com/PX4/PX4-Autopilot/issues/14762
+
+</details>
