@@ -316,7 +316,7 @@ mkdir launch
 cd launch
 touch start_offb.launch
 ```
-Edit `offb_node.py` with following code:
+#### Edit `start_offb.launch` with following code:
 ```=
 <?xml version="1.0"?>
 <launch>
