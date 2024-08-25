@@ -26,7 +26,7 @@ https://catkin-tools.readthedocs.io/en/latest/installing.html
 
 ### 2. Modify .bashrc
 https://docs.px4.io/main/en/ros/mavros_offboard_python.html#launching-your-script
-將下面幾行放到你的 .bashrc 中，並且 setup.bash 要在 PX4 的四行命令之前，並且後面不能再 source 其他 working space 的 setup.bash。
+將下面幾行放到你的 .bashrc 中，並且 setup.bash 要在 PX4 的四行命令之前，並且後面不能再 source 其他 workspace 的 setup.bash。
 ```
 source ~/<你的工作目錄>/devel/setup.bash
 source ~/PX4-Autopilot/Tools/simulation/gazebo-classic/setup_gazebo.bash ~/PX4-Autopilot ~/PX4-Autopilot/build/px4_sitl_default
