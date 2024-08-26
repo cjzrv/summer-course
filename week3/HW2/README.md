@@ -145,6 +145,8 @@ https://www.youtube.com/watch?v=3CWNg_pJPFQ
 > This video starts after completing the "Run the `ubuntu.sh` to install" step.  
 You can download the vdi file from my Google Drive [here](https://drive.google.com/file/d/1LMt0zbts0C5hIjb7dVVFDUKfM0ROCESi/view?usp=drive_link) if you want to follow along with the video. (The user password is "rvl".)
 
+**!! If you are a student from the Robot Vision Lab, make sure to download from our [NAS](http://gofile.me/3rsol/q4LWCGK8x). Downloading from external sources could lead to our lab's network being blocked. !!**
+
 > You can check out this article on my HackMD (for better HTML syntax support).  
 https://hackmd.io/@zjewp/px4
 
